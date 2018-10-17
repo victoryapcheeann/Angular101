@@ -7,8 +7,8 @@ interface Passenger {
 }
 
 @Component({
-  selector: 'app-ng-class',
-  styleUrls: ['./ng-class.component.scss'],
+  selector: 'app-ng-classstyle',
+  styleUrls: ['./ng-classstyle.component.scss'],
   template: `
   <div class="app">
     <h3>Airline Passengers</h3>
@@ -32,10 +32,20 @@ interface Passenger {
         {{ i }}: {{ passenger.fullname }}
       </li>
     </ul>
+    <ul>
+    <li *ngFor="let passenger of passengers; let i = index;">
+      <span
+        class="status"
+        [ngStyle]="{
+          backgroundColor: (passenger.checkedIn ? '#2ecc71' : '#c0392b')
+        }"></span>
+      {{ i }}: {{ passenger.fullname }}
+    </li>
+  </ul>
   </div>
 `
 })
-export class NgClassComponent implements OnInit {
+export class NgClassStyleComponent implements OnInit {
   passengers: Passenger[] = [{
     id: 1,
     fullname: 'Stephen',

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgClassComponent } from './ng-class.component';
+import { NgClassStyleComponent } from './ng-classstyle.component';
 
 describe('NgClassComponent', () => {
-  let component: NgClassComponent;
-  let fixture: ComponentFixture<NgClassComponent>;
+  let component: NgClassStyleComponent;
+  let fixture: ComponentFixture<NgClassStyleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgClassComponent ]
+      declarations: [ NgClassStyleComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgClassComponent);
+    fixture = TestBed.createComponent(NgClassStyleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
