@@ -6,12 +6,14 @@ import { FormsModule } from '@angular/Forms';
 import { AppComponent } from './app.component';
 import { ES6Component } from './es6/es6.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { NgClassComponent } from './ng-class/ng-class.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ES6Component,
-    NgForComponent
+    NgForComponent,
+    NgClassComponent
   ],
   imports: [
     BrowserModule,
