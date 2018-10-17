@@ -10,6 +10,9 @@ export class AppComponent {
   number1: number = 1
   number2: number = 2
   isHappy: boolean = true
+  logo: string = '../favicon.ico'
+  name: string = 'Victor'
+
   constructor() {
     this.title = 'angular101'
   }
