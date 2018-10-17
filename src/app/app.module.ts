@@ -8,6 +8,7 @@ import { ES6Component } from './es6/es6.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { NgClassStyleComponent } from './ng-classstyle/ng-classstyle.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { SafenavigationComponent } from './safenavigation/safenavigation.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PipesComponent } from './pipes/pipes.component';
     ES6Component,
     NgForComponent,
     NgClassStyleComponent,
-    PipesComponent
+    PipesComponent,
+    SafenavigationComponent
   ],
   imports: [
     BrowserModule,
