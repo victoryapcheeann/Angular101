@@ -1,9 +1,11 @@
+<h1>Part 0: ES6 Refresher</h1>
 <!-- ES6 Refresher -->
-<h1>ES6</h1>
+<h2>ES6</h2>
 <app-es6></app-es6>
 
+<h1>Part 1: Template Fundamentals</h1>
 <!--Interpolation & Expressions-->
-<h1>Interpolation & Expressions</h1>
+<h2>Interpolation & Expressions</h2>
 <div class="app">
   {{title + '!'}}
 </div>
@@ -22,7 +24,7 @@
 </div>
 
 <!--Property Binding-->
-<h1>Property Binding</h1>
+<h2>Property Binding</h2>
 <div>
   <div>{{title}}</div>
   <div [innerHTML]="title"></div> <!--One way data binding-->
@@ -32,7 +34,7 @@
 </div>
 
 <!--Event Binding-->
-<h1>Event Binding</h1>
+<h2>Event Binding</h2>
 <div>
   <input 
     type = "text" 
@@ -47,7 +49,7 @@
 </div>
 
 <!--Two way databinding-->
-<h1>Two way databinding</h1>
+<h2>Two way databinding</h2>
 <div>
   <input 
     type = "text" 
@@ -59,3 +61,34 @@
     type = "text" 
     [(ngModel)]="name2">
 </div>
+
+<!--Template #ref variables-->
+<h2>Template #ref variables</h2>
+<div>
+  <button (click) = "handleClick2(username.value)">
+    Get value
+  </button>
+  <input type="text" #username>
+</div>
+
+<h1>Part 2: Rendering flows</h1>
+<!--ngIf, * syntax and ng-template-->
+<h2>ngIf, * syntax and ng-template</h2>
+
+<!--First method-->
+<input 
+  type = "text" 
+  [ngModel]="name3" 
+  (ngModelChange)="handleChange3($event)">
+<div *ngIf="name3.length > 2">
+  Searching for... {{name3}}
+</div>
+
+<ng-template [ngIf]="name.length > 3">
+  <div>
+    Searching for...{{name3}}
+  </div>
+</ng-template>
+
+<h2>ngFor and iterating collections</h2>
+<app-ng-for></app-ng-for>
