@@ -16,4 +16,17 @@ export class AppComponent {
   constructor() {
     this.title = 'angular101'
   }
+
+  handleBlur(event: any) {
+    this.name = event.target.value;
+    console.log(event);
+  }
+
+  handleInput(event: any) {
+    this.name = event.target.value;
+  }
+
+  handleClick() {
+    this.name = "Johnny"
+  }
 }
