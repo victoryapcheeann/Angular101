@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ES6Component } from './es6/es6.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { NgClassStyleComponent } from './ng-classstyle/ng-classstyle.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ES6Component,
     NgForComponent,
-    NgClassStyleComponent
+    NgClassStyleComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
