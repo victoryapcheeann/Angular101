@@ -1,0 +1,9 @@
+Just a few things to take note on that have changed since the course was recorded. These are very brief, and worth addressing after you've completed the course as they are just minor changes.
+
+<template> is now <ng-template>
+
+Http is now HttpClient
+
+This change is almost identical but also comes with some additional typing options
+
+RxJS v6 imports have changed, read more here. This does not affect behaviour or concepts of the courses, merely an aesthetic change.
