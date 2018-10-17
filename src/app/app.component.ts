@@ -12,6 +12,7 @@ export class AppComponent {
   isHappy: boolean = true
   logo: string = '../favicon.ico'
   name: string = 'Victor'
+  name2: string = 'Mary'
 
   constructor() {
     this.title = 'angular101'
@@ -28,5 +29,9 @@ export class AppComponent {
 
   handleClick() {
     this.name = "Johnny"
+  }
+
+  handleChange(value:string) {
+    this.name2 = value
   }
 }

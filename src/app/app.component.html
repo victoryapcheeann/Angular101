@@ -1,7 +1,9 @@
 <!-- ES6 Refresher -->
+<h1>ES6</h1>
 <app-es6></app-es6>
 
 <!--Interpolation & Expressions-->
+<h1>Interpolation & Expressions</h1>
 <div class="app">
   {{title + '!'}}
 </div>
@@ -19,21 +21,41 @@
   {{isHappy ? ':)' : ':(' }}
 </div>
 
-<!--Propety Binding-->
-<h1>{{title}}</h1>
-<h1 [innerHTML]="title"></h1> <!--One way data binding-->
-<img [src]="logo">
-<input type="text" [value]="name">
-<div>{{name}}</div>
+<!--Property Binding-->
+<h1>Property Binding</h1>
+<div>
+  <div>{{title}}</div>
+  <div [innerHTML]="title"></div> <!--One way data binding-->
+  <img [src]="logo">
+  <input type="text" [value]="name">
+  <div>{{name}}</div>
+</div>
 
 <!--Event Binding-->
-<input 
-type = "text" 
-[value]="name" 
-(input)="handleInput($event)"
-(blur)="handleBlur($event)">
+<h1>Event Binding</h1>
+<div>
+  <input 
+    type = "text" 
+    [value]="name" 
+    (input)="handleInput($event)"
+    (blur)="handleBlur($event)">
 
-<button 
-(click) = "handleClick()">
-Change Name
-</button>
+  <button 
+    (click) = "handleClick()">
+    Change Name
+  </button>
+</div>
+
+<!--Two way databinding-->
+<h1>Two way databinding</h1>
+<div>
+  <input 
+    type = "text" 
+    [ngModel]="name2" 
+    (ngModelChange)="handleChange($event)">
+  <div>{{name2}}</div>
+
+  <input 
+    type = "text" 
+    [(ngModel)]="name2">
+</div>
