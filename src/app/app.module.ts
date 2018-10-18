@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ES6Component } from './es6/es6.component';
-import { NgForComponent } from './ng-for/ng-for.component';
-import { NgClassStyleComponent } from './ng-classstyle/ng-classstyle.component';
-import { PipesComponent } from './pipes/pipes.component';
-import { SafenavigationComponent } from './safenavigation/safenavigation.component';
+import { ES6Component } from './lesson-es6/es6.component';
+import { NgForComponent } from './lesson-ng-for/ng-for.component';
+import { NgClassStyleComponent } from './lesson-ng-classstyle/ng-classstyle.component';
+import { PipesComponent } from './lesson-pipes/pipes.component';
+import { SafenavigationComponent } from './lesson-safenavigation/safenavigation.component';
+
+import { PassengerDashboardModule } from './project1-component/passenger-dashboard.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { SafenavigationComponent } from './safenavigation/safenavigation.compone
   imports: [
     BrowserModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    PassengerDashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
