@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+button {
+    cursor: pointer;
+    background: #9f72e6;
+    border: 0;
+    border-radius: 2px;
+    padding: 5px 10px;
+    text-align: center;
+    color: #fff;
+    margin: 10px;
+  }
+  button:disabled {
+    cursor: not-allowed;
+    background: #b598e4;
+  }
