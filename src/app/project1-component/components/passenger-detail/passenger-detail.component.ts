@@ -1,4 +1,5 @@
-import { Component, OnChanges, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnChanges, Input, Output, EventEmitter } from '@angular/core';
+
 import { Passenger } from '../../models/passenger.interface';
 
 @Component({
@@ -27,23 +28,22 @@ import { Passenger } from '../../models/passenger.interface';
       <button (click)="toggleEdit()">
         {{ editing ? 'Done' : 'Edit' }}
       </button>
-      <button (click)="onRemove()">  <!--Step 1) Create the button-->
+      <button (click)="onRemove()">
         Remove
       </button>
     </div>
   `
 })
-export class PassengerDetailComponent implements OnChanges, OnInit {
+export class PassengerDetailComponent implements OnChanges {
 
   @Input()
   detail: Passenger;
 
   @Output()
-  edit: EventEmitter<any> = new EventEmitter();
+  edit: EventEmitter<Passenger> = new EventEmitter<Passenger>();
 
-    //Step 3) Output implementation - Link it to the parent compoenet
   @Output()
-  remove: EventEmitter<any> = new EventEmitter();
+  remove: EventEmitter<Passenger> = new EventEmitter<Passenger>();
 
   editing: boolean = false;
   
@@ -53,11 +53,6 @@ export class PassengerDetailComponent implements OnChanges, OnInit {
     if (changes.detail) {
       this.detail = Object.assign({}, changes.detail.currentValue);
     }
-    console.log('ngOnChanges');
-  }
-
-  ngOnInit() {
-    console.log('ngOnInit');
   }
   
   onNameChange(value: string) {
@@ -70,8 +65,6 @@ export class PassengerDetailComponent implements OnChanges, OnInit {
     }
     this.editing = !this.editing;
   }
-
-   //Step 2) onRemove Implementation
   onRemove() {
     this.remove.emit(this.detail);
   }
