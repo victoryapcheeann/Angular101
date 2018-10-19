@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ES6Component } from './lesson-es6/es6.component';
@@ -25,7 +26,8 @@ import { PassengerDashboardModule } from './project1-component/passenger-dashboa
     BrowserModule,
     CommonModule,
     FormsModule,
-    PassengerDashboardModule
+    PassengerDashboardModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
